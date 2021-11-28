@@ -1,32 +1,33 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link>
-    </div>
-    <router-view/>
+    <nav-bar></nav-bar>
+    <router-view class="content" />
+    <footer id="footer"></footer>
   </div>
 </template>
+<script>
+import NavBar from "@/components/NavBar.vue";
+
+export default {
+  name: "App",
+  components: {
+    NavBar,
+  },
+};
+</script>
 
 <style lang="scss">
 @import "~@/assets/scss/vendors/bootstrap-vue/index";
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Outfit, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  color: $text;
 }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.content {
+  padding-top: 150px;
 }
 </style>

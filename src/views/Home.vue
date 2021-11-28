@@ -1,13 +1,116 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="short-desc">
+      <div class="title-short-desc">
+        <div class="first-line-title-short-desc">Hi, the name's</div>
+        <h1 class="second-line-title-short-desc">
+          <span class="glitch">U</span>mut.
+        </h1>
+        <div class="third-line-title-short-desc">Pleasure meeting you!</div>
+      </div>
+      <p class="text-short-desc">
+        Long story short: I'm a charismatic particle physicist currently working
+        at getting that PhD going. <br />
+        In love with DSLR photography, coding and solving problems in general.
+        <br /><br />
+        Better in person, so let's meet!
+      </p>
+      <div class="socials-short-desc">
+        <i class="bi bi-clipboard"></i>
+      </div>
+    </div>
+    <b-img
+      fluid
+      class="profile-picture"
+      alt="That's me!"
+      src="@/assets/images/profile-picture.jpg"
+    ></b-img>
+    <footer class="footer"></footer>
   </div>
 </template>
 
 <script>
-
 export default {
-  name: 'Home',
-}
+  name: "Home",
+};
 </script>
+
+<style lang="scss">
+.home {
+  display: grid;
+  top: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 940px;
+  grid-template-areas:
+    "short-desc profile-pic"
+    "footer footer";
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+  line-height: 25px;
+}
+
+.short-desc {
+  display: grid;
+  grid-area: short-desc;
+  grid-template-areas:
+    "short-desc-title"
+    "short-desc-text"
+    "short-desc-socials";
+  height: fit-content;
+  align-self: center;
+}
+
+.title-short-desc {
+  display: grid;
+  grid-template-areas:
+    "first-line"
+    "second-line"
+    "third-line";
+  grid-area: short-desc-title;
+  text-align: start;
+  font-size: 2.2em;
+  line-height: 0px;
+  padding-bottom: 1em;
+}
+
+.text-short-desc {
+  grid-area: short-desc-text;
+  text-align: start;
+  color: $gray-600;
+  line-height: 30px;
+}
+
+.socials-short-desc {
+  grid-area: short-desc-socials;
+}
+
+.profile-picture {
+  grid-area: profile-pic;
+  border: solid white;
+  border-radius: 2rem;
+}
+
+.first-line-title-short-desc {
+  grid-area: first-line;
+}
+
+.second-line-title-short-desc {
+  grid-area: second-line;
+  font-size: 3.5em;
+  font-weight: bold;
+  text-align: start;
+}
+
+.third-line-title-short-desc {
+  grid-area: third-line;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.glitch {
+  text-shadow: 5px 5px $primary;
+}
+</style>
