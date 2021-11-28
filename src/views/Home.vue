@@ -103,7 +103,6 @@ a:hover {
 .text-short-desc {
   grid-area: short-desc-text;
   text-align: start;
-  color: $gray-600;
   line-height: 30px;
 }
 
