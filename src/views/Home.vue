@@ -16,7 +16,10 @@
         Better in person, so let's meet!
       </p>
       <div class="socials-short-desc">
-        <i class="bi bi-clipboard"></i>
+        <span class="mr-2">Follow me on</span>
+        <a v-for="(social, i) in socials" :key="i" :href="social.link">
+          <b-icon class="mx-2" :icon="social.icon"></b-icon>
+        </a>
       </div>
     </div>
     <b-img
@@ -30,12 +33,35 @@
 </template>
 
 <script>
+import { BIcon, BIconInstagram, BIconGithub } from "bootstrap-vue";
 export default {
   name: "Home",
+  components: {
+    BIcon,
+    BIconInstagram,
+    BIconGithub,
+  },
+  data() {
+    return {
+      socials: [
+        { icon: "instagram", link: "https://instagram.com/esistderboss" },
+        { icon: "github", link: "https://github.com/umute97" },
+      ],
+    };
+  },
 };
 </script>
 
 <style lang="scss">
+
+a {
+  color: $text;
+}
+
+a:hover {
+  color: $primary;
+}
+
 .home {
   display: grid;
   top: 250px;
