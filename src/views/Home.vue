@@ -17,7 +17,7 @@
       </p>
       <div class="socials-short-desc">
         <span class="mr-2">Follow me on</span>
-        <a v-for="(social, i) in socials" :key="i" :href="social.link">
+        <a class="hop" v-for="(social, i) in socials" :key="i" :href="social.link">
           <b-icon class="mx-2" :icon="social.icon"></b-icon>
         </a>
       </div>
@@ -54,12 +54,17 @@ export default {
 
 <style lang="scss">
 
-a {
+.hop {
+  display: inline-block;
   color: $text;
+  transition: transform 120ms cubic-bezier(.42,-0.47,.74,.05) 0ms;
 }
 
-a:hover {
+.hop:hover,
+.hop:focus {
   color: $primary;
+  transform: scale(1.2);
+  outline: none;
 }
 
 .home {
@@ -112,7 +117,7 @@ a:hover {
 
 .profile-picture {
   grid-area: profile-pic;
-  border: solid white;
+  border: 1px solid white;
   border-radius: 2rem;
 }
 
@@ -125,6 +130,13 @@ a:hover {
   font-size: 3.5em;
   font-weight: bold;
   text-align: start;
+
+  transition: transform 150ms cubic-bezier(.57,-1.3,.34,2.28) 0ms;
+}
+
+.second-line-title-short-desc:hover {
+  transform: 
+    scale(1.05);
 }
 
 .third-line-title-short-desc {
@@ -136,6 +148,6 @@ a:hover {
 }
 
 .glitch {
-  text-shadow: 5px 5px $primary;
+  text-shadow: 7px 7px $primary;
 }
 </style>
