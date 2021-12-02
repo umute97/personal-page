@@ -15,7 +15,9 @@
     </div>
     <div class="tag-selector"></div>
     <div class="gallery">
-      <b-img fluid class="gallery-image" v-for="(d, i) of eximages" :key="i" :src="d"></b-img>
+      <div class="gallery-item" v-for="(d, i) of eximages" :key="i">
+        <b-img fluid class="gallery-image" :src="d"></b-img>
+      </div>
     </div>
   </div>
 </template>
@@ -24,13 +26,13 @@
 export default {
   computed: {
     eximages() {
-      var paths = []
-      for(const x of Array(21).keys()) {
-        paths.push(`https://source.unsplash.com/featured?${(x).toString()}`)
+      var paths = [];
+      for (const x of Array(21).keys()) {
+        paths.push(`https://source.unsplash.com/featured?${x.toString()}`);
       }
-      return paths
+      return paths;
     },
-  }
+  },
 };
 </script>
 
@@ -63,7 +65,7 @@ export default {
 .header-title h1 {
   font-size: 2.5em;
   font-weight: bold;
-  transition: transform 150ms cubic-bezier(.57,-1.3,.34,2.28) 0ms;
+  transition: transform 150ms cubic-bezier(0.57, -1.3, 0.34, 2.28) 0ms;
 }
 .header-title h1:hover {
   transform: scale(1.05);
@@ -80,9 +82,19 @@ export default {
   grid-template-columns: repeat(auto-fill, $width);
 }
 
+.gallery-item {
+  overflow: hidden;
+}
 .gallery-image {
+  display: block;
   object-fit: cover;
   width: 100%;
   height: 100%;
+  transition: transform 400ms ease-out 0s;
+}
+
+.gallery-image:hover,
+.gallery-image:focus {
+  transform: scale(1.15);
 }
 </style>

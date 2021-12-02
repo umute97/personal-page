@@ -30,4 +30,8 @@ export default {
 .content {
   padding-top: 150px;
 }
+
+::selection {
+  background: $primary;
+}
 </style>
