@@ -27,7 +27,6 @@ export default {
       var paths = []
       for(const x of Array(21).keys()) {
         paths.push(`https://source.unsplash.com/featured?${(x).toString()}`)
-        console.log(paths)
       }
       return paths
     },
