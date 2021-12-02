@@ -4,7 +4,7 @@
     <b-navbar-nav class="m-auto">
       <b-nav-item class="nav-item" to="home">Home</b-nav-item>
       <b-nav-item class="nav-item" to="home">Skillset</b-nav-item>
-      <b-nav-item class="nav-item" to="home">Photography</b-nav-item>
+      <b-nav-item class="nav-item" to="photography">Photography</b-nav-item>
       <b-nav-item class="nav-item" to="home">Contact</b-nav-item>
     </b-navbar-nav>
   </b-navbar>
