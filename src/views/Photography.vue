@@ -7,9 +7,15 @@
       </div>
       <div class="header-desc">
         <p>
-          To soothe the soul and find inner peace, I like to experience magic
-          moments and capture them using my DSLR. I invite you to take a look at
-          a few of my favorite memories below (click on them!).
+          To soothe the soul and expand my knowledge, I like to experience magic
+          moments and capture them using my DSLR.
+          <br />
+          Throughout my journey I have come to realize that there is so much 
+          more to photography than just pressing the shutter button. It combines 
+          art with technical knowledge.
+          <p />
+          I invite you to take a look at a few of my favorite memories below
+          (click on them!).
         </p>
       </div>
     </div>
