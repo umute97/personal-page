@@ -22,23 +22,39 @@
     <div class="tag-selector"></div>
     <div class="gallery">
       <div class="gallery-item" v-for="(d, i) of eximages" :key="i">
-        <b-img fluid class="gallery-image" :src="d"></b-img>
+        <b-img fluid class="gallery-image" :src="d" @click="enlargeImage(i)"></b-img>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import ZoomedView from '../components/ZoomedView.vue';
 export default {
-  computed: {
-    eximages() {
-      var paths = [];
-      for (const x of Array(21).keys()) {
-        paths.push(`https://source.unsplash.com/featured?${x.toString()}`);
-      }
-      return paths;
+    name: 'Photography',
+    components: {ZoomedView},
+    data() {
+      return {
+        enlargedImagePath: null,
+        showEnlargedImage: false,
+      };
     },
-  },
+    computed: {
+        eximages() {
+            var paths = [];
+            for (const x of Array(21).keys()) {
+                paths.push(`https://source.unsplash.com/featured?${x.toString()}`);
+            }
+            return paths;
+        },
+    },
+    methods: {
+        enlargeImage(index) {
+            console.log(`Clicked image ${this.eximages[index]}`);
+            this.enlargedImagePath = this.eximages[index];
+            this.showEnlargedImage = true;
+        },
+    },
 };
 </script>
 
