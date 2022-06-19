@@ -25,6 +25,7 @@
         <b-img fluid class="gallery-image" :src="d" @click="enlargeImage(i)"></b-img>
       </div>
     </div>
+    <ZoomedView :imagePath="enlargedImagePath" :enlarged="showEnlargedImage" :tags="exampleTags" @minimizeImage="minimizeImage()"/>
   </div>
 </template>
 
@@ -37,6 +38,7 @@ export default {
       return {
         enlargedImagePath: null,
         showEnlargedImage: false,
+        exampleTags: ['nature', 'streets', 'snapshot'],
       };
     },
     computed: {
@@ -54,6 +56,10 @@ export default {
             this.enlargedImagePath = this.eximages[index];
             this.showEnlargedImage = true;
         },
+        minimizeImage() {
+          console.log('Minimized caught');
+          this.showEnlargedImage = false;
+        }
     },
 };
 </script>
