@@ -21,43 +21,49 @@
     </div>
     <div class="tag-selector"></div>
     <div class="gallery">
-      <div class="gallery-item" v-for="(d, i) of eximages" :key="i">
-        <b-img fluid class="gallery-image" :src="d" @click="enlargeImage(i)"></b-img>
+      <div class="gallery-item" v-for="(image, i) of images" :key="i">
+        <b-img fluid class="gallery-image" :src="image" @click="enlargeImage(i)"></b-img>
       </div>
     </div>
-    <ZoomedView :imagePath="enlargedImagePath" :enlarged="showEnlargedImage" :tags="exampleTags" @minimizeImage="minimizeImage()"/>
+    <ZoomedView :imagePath="enlargedImagePath" :title="enlargedTitle" :enlarged="showEnlargedImage" :tags="enlargedTags" @minimizeImage="minimizeImage()"/>
   </div>
 </template>
 
 <script>
 import ZoomedView from '../components/ZoomedView.vue';
+import data from "../imagemeta.json";
 export default {
     name: 'Photography',
     components: {ZoomedView},
     data() {
       return {
-        enlargedImagePath: null,
+        enlargedImagePath: "",
+        enlargedTitle: "",
+        enlargedTags: [],
         showEnlargedImage: false,
-        exampleTags: ['nature', 'streets', 'snapshot'],
+        imagedata: [],
       };
     },
+    async created() {
+      this.imagedata = data;
+    },
     computed: {
-        eximages() {
+        images() {
             var paths = [];
-            for (const x of Array(21).keys()) {
-                paths.push(`https://source.unsplash.com/featured?${x.toString()}`);
+            for (const x of this.imagedata) {
+                paths.push(x.imagePath);
             }
             return paths;
         },
     },
     methods: {
         enlargeImage(index) {
-            console.log(`Clicked image ${this.eximages[index]}`);
-            this.enlargedImagePath = this.eximages[index];
+            this.enlargedImagePath = this.images[index];
+            this.enlargedTitle = this.imagedata[index].title;
+            this.enlargedTags = this.imagedata[index].tags;
             this.showEnlargedImage = true;
         },
         minimizeImage() {
-          console.log('Minimized caught');
           this.showEnlargedImage = false;
         }
     },
