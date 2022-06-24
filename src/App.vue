@@ -27,11 +27,18 @@ export default {
   color: $text;
 }
 
-.content {
-  padding-top: 150px;
-}
-
 ::selection {
   background: $primary;
+}
+
+@media (max-width: 768px) {
+#app {
+  font-family: Outfit, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $text;
+}
+
 }
 </style>
