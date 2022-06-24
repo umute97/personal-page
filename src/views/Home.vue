@@ -66,7 +66,7 @@ export default {
   display: grid;
   grid-auto-flow: column;
   margin: 0 auto;
-  max-width: 50em;
+  max-width: 90%;
   gap: 3em;
 }
 
@@ -101,8 +101,10 @@ img {
   .home {
     display: block;
     margin: 0 auto;
-    max-width: 30em;
     text-align: center;
+  }
+  .short-desc h1 {
+    font-size: 22vw;
   }
 
   img {
