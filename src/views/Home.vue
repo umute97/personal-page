@@ -47,7 +47,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .hop {
   display: inline-block;
   color: $text;
@@ -62,7 +62,7 @@ export default {
 }
 
 .home {
-  padding-top: 5em;
+  padding-top: 4em;
   display: grid;
   grid-auto-flow: column;
   margin: 0 auto;
@@ -76,6 +76,15 @@ export default {
 
 .short-desc h1 {
   display: inline-block;
+  font-size: 8em;
+  font-weight: bold;
+  text-align: start;
+
+  transition: transform 150ms cubic-bezier(0.57, -1.3, 0.34, 2.28) 0ms;
+}
+
+.short-desc h1:hover {
+  transform: scale(1.05);
 }
 
 img {
@@ -84,21 +93,8 @@ img {
   border-radius: 2rem;
 }
 
-.second-line-title-short-desc {
-  grid-area: second-line;
-  font-size: 8em;
-  font-weight: bold;
-  text-align: start;
-
-  transition: transform 150ms cubic-bezier(0.57, -1.3, 0.34, 2.28) 0ms;
-}
-
-.second-line-title-short-desc:hover {
-  transform: scale(1.05);
-}
-
 .glitch {
-  text-shadow: 7px 7px $primary;
+  text-shadow: 0.07em 0.07em $primary;
 }
 
 @media (max-width: 768px) {
