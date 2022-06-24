@@ -1,23 +1,21 @@
 <template>
   <div class="photography">
     <div class="header">
-      <div class="header-title">
         <h1><span class="glitch">P</span>hotography</h1>
-        <div>is <span class="more">more</span> than just a hobby.</div>
-      </div>
-      <div class="header-desc">
+        <h2>is <span class="more">more</span> than just a hobby.</h2>
         <p>
           To soothe the soul and expand my knowledge, I like to experience magic
           moments and capture them using my DSLR.
-          <br />
+        </p>
+        <p>
           Throughout my journey I have come to realize that there is so much 
           more to photography than just pressing the shutter button. It combines 
           art with technical knowledge.
-          <p />
+        </p>
+        <p>
           I invite you to take a look at a few of my favorite memories below
           (click on them!).
         </p>
-      </div>
     </div>
     <div class="tag-selector"></div>
     <div class="gallery">
@@ -76,37 +74,40 @@ export default {
 }
 
 .photography {
-  top: 100px;
-  max-width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 30px;
+  display: block;
+  padding-top: 3em;
+  margin: 0 auto;
+  max-width: 50em;
 }
 
 .header {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 100px;
-  max-width: 1000px;
-}
-
-.header-title {
   text-align: center;
-  margin-bottom: 50px;
-  font-size: 2.2em;
+  max-width: 90%;
+  margin: 0 auto;
+  margin-bottom: 2em;
 }
 
-.header-title h1 {
-  font-size: 2.5em;
+.header p {
+  text-align: start;
+}
+.header h2 {
+  font-size: 2em;
+}
+
+.header h1 {
+  display: inline-block;
+  font-size: 6em;
   font-weight: bold;
+
   transition: transform 150ms cubic-bezier(0.57, -1.3, 0.34, 2.28) 0ms;
 }
-.header-title h1:hover {
+
+.header h1:hover {
   transform: scale(1.05);
 }
 
 .glitch {
-  text-shadow: 7px 7px $primary;
+  text-shadow: 0.07em 0.07em $primary;
 }
 
 .gallery {
@@ -130,5 +131,11 @@ export default {
 .gallery-image:hover,
 .gallery-image:focus {
   transform: scale(1.15);
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 15vw;
+  }
 }
 </style>
