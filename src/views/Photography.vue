@@ -68,7 +68,7 @@ export default {
         },
         minimizeImage() {
           this.showEnlargedImage = false;
-        }
+        },
         nextImage() {
           this.enlargedImageIndex++;
         },
