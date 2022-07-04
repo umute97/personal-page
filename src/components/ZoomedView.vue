@@ -60,13 +60,13 @@ export default {
   },
   computed: {
     title() {
-      return this.imagedata[index].title;
+      return this.imagedata[this.index].title;
     },
     tags() {
-      return this.imagedata[index].tags;
+      return this.imagedata[this.index].tags;
     },
     imagePath() {
-      return this.imagedata[index].imagePath;
+      return this.imagedata[this.index].imagePath;
     },
   },
 };
