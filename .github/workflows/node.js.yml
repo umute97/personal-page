@@ -29,3 +29,9 @@ jobs:
     - run: rm -rf package-lock.json node_modules
     - run: npm i
     - run: npm run build --if-present
+    - name: Archive build files
+      uses: actions/upload-artifact@v3
+      with:
+        name: dist-without-markdown
+        path: |
+          dist
