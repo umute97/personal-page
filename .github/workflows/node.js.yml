@@ -32,6 +32,6 @@ jobs:
     - name: Archive build files
       uses: actions/upload-artifact@v3
       with:
-        name: dist-without-markdown
+        name: build
         path: |
           dist
