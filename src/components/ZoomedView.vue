@@ -31,19 +31,43 @@
 </template>
 <script>
 import { BIcon, BIconX } from 'bootstrap-vue';
+
 export default {
   name: 'ZoomedView',
   components: {
     BIcon,
     BIconX,
   },
-  props: ['imagePath', 'title', 'enlarged', 'tags'],
+  props: ['index', 'imageData', 'enlarged'],
   created() {
+    // Key controls for gallery
     window.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && this.enlarged) {
-        this.$emit('minimizeImage');
+      if (this.enlarged) {
+        switch (event.key) {
+          case 'Escape':
+            this.$emit('minimizeImage');
+            break;
+          case 'left arrow':
+            this.$emit('prevImage');
+            break;
+          case 'right arrow':
+            this.$emit('nextImage');
+            break;
+
+        }
       }
     });
+  },
+  computed: {
+    title() {
+      return this.imagedata[index].title;
+    },
+    tags() {
+      return this.imagedata[index].tags;
+    },
+    imagePath() {
+      return this.imagedata[index].imagePath;
+    },
   },
 };
 </script>

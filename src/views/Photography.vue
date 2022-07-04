@@ -1,49 +1,57 @@
 <template>
   <div class="photography">
     <div class="header">
-        <h1><span class="glitch">P</span>hotography</h1>
-        <h2>is <span class="more">more</span> than just a hobby.</h2>
-        <p>
-          To soothe the soul and expand my knowledge, I like to experience magic
-          moments and capture them using my DSLR.
-        </p>
-        <p>
-          Throughout my journey I have come to realize that there is so much 
-          more to photography than just pressing the shutter button. It combines 
-          art with technical knowledge.
-        </p>
-        <p>
-          I invite you to take a look at a few of my favorite memories below
-          (click on them!).
-        </p>
+      <h1><span class="glitch">P</span>hotography</h1>
+      <h2>is <span class="more">more</span> than just a hobby.</h2>
+      <p>
+        To soothe the soul and expand my knowledge, I like to experience magic
+        moments and capture them using my DSLR.
+      </p>
+      <p>
+        Throughout my journey I have come to realize that there is so much more
+        to photography than just pressing the shutter button. It combines art
+        with technical knowledge.
+      </p>
+      <p>
+        I invite you to take a look at a few of my favorite memories below
+        (click on them!).
+      </p>
     </div>
     <div class="tag-selector"></div>
     <div class="gallery">
       <div class="gallery-item" v-for="(image, i) of images" :key="i">
-        <b-img fluid class="gallery-image" :src="image" @click="enlargeImage(i)"></b-img>
+        <b-img
+          fluid
+          class="gallery-image"
+          :src="image"
+          @click="enlargeImage(i)"
+        ></b-img>
       </div>
     </div>
-    <ZoomedView :imagePath="enlargedImagePath" :title="enlargedTitle" :enlarged="showEnlargedImage" :tags="enlargedTags" @minimizeImage="minimizeImage()"/>
+    <ZoomedView
+      :index="enlargedImageIndex"
+      :imageData="imagedata"
+      :enlarged="showEnlargedImage"
+      @minimizeImage="minimizeImage()"
+      @prevImage="prevImage()"
+      @nextImage="nextImage()"
+    />
   </div>
 </template>
 
 <script>
 import ZoomedView from '../components/ZoomedView.vue';
 import data from "../imagemeta.json";
+
 export default {
     name: 'Photography',
     components: {ZoomedView},
     data() {
       return {
-        enlargedImagePath: "",
-        enlargedTitle: "",
-        enlargedTags: [],
+        enlargedImageIndex: 0,
         showEnlargedImage: false,
-        imagedata: [],
+        imagedata: data,
       };
-    },
-    async created() {
-      this.imagedata = data;
     },
     computed: {
         images() {
@@ -56,14 +64,17 @@ export default {
     },
     methods: {
         enlargeImage(index) {
-            this.enlargedImagePath = this.images[index];
-            this.enlargedTitle = this.imagedata[index].title;
-            this.enlargedTags = this.imagedata[index].tags;
-            this.showEnlargedImage = true;
+          this.showEnlargedImage = true;
         },
         minimizeImage() {
           this.showEnlargedImage = false;
         }
+        nextImage() {
+          this.enlargedImageIndex++;
+        },
+        prevImage() {
+          this.enlargedImageIndex--;
+        },
     },
 };
 </script>
