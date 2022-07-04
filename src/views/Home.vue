@@ -65,6 +65,7 @@ export default {
   padding-top: 4em;
   display: grid;
   grid-auto-flow: column;
+  place-items: center;
   margin: 0 auto;
   max-width: 90%;
   gap: 3em;
