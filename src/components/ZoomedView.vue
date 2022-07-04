@@ -38,7 +38,7 @@ export default {
     BIcon,
     BIconX,
   },
-  props: ['index', 'imageData', 'enlarged'],
+  props: ['index', 'imagedata', 'enlarged'],
   created() {
     // Key controls for gallery
     window.addEventListener('keydown', (event) => {

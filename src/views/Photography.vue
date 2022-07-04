@@ -30,7 +30,7 @@
     </div>
     <ZoomedView
       :index="enlargedImageIndex"
-      :imageData="imagedata"
+      :imagedata="imagedata"
       :enlarged="showEnlargedImage"
       @minimizeImage="minimizeImage()"
       @prevImage="prevImage()"
