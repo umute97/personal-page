@@ -17,13 +17,21 @@
         (click on them!).
       </p>
     </div>
-    <div class="tag-selector"></div>
+    <div class="tag-selector">
+      <b-input
+        v-model="searchTerm"
+        type="search"
+        placeholder="Search by tag"
+        class="tag-selector-input"
+      ></b-input>
+    </div>
     <div class="gallery">
-      <div class="gallery-item" v-for="(image, i) of images" :key="i">
+      <div class="gallery-item" v-for="(image, i) of imagedata" :key="i">
         <b-img
+          v-if="image.show"
           fluid
           class="gallery-image"
-          :src="image"
+          :src="image.imagePath"
           @click="enlargeImage(i)"
         ></b-img>
       </div>
@@ -40,43 +48,58 @@
 </template>
 
 <script>
-import ZoomedView from '../components/ZoomedView.vue';
+import ZoomedView from "../components/ZoomedView.vue";
 import data from "../imagemeta.json";
+import fuzzysort from 'fuzzysort';
 
 export default {
-    name: 'Photography',
-    components: {ZoomedView},
-    data() {
-      return {
-        enlargedImageIndex: 0,
-        showEnlargedImage: false,
-        imagedata: data,
-      };
+  name: "Photography",
+  components: { ZoomedView },
+  data() {
+    return {
+      enlargedImageIndex: 0,
+      showEnlargedImage: false,
+      imagedata: data,
+      searchTerm: null,
+    };
+  },
+  computed: {
+    filteredImages() {
+      const taglist = this.imagedata.map(a => a.tags);
+      for (let i = 0; i < taglist.length; i++) {
+        console.log(this.searchTerm, taglist[i]);
+        const result = fuzzysort.go(this.searchTerm, taglist[i]);
+        if (result.length > 0) {
+          this.imagedata[i].show = true;
+        }
+      }
+      console.log(this.imagedata);
+      return this.searchTerm;
     },
-    computed: {
-        images() {
-            var paths = [];
-            for (const x of this.imagedata) {
-                paths.push(x.imagePath);
-            }
-            return paths;
-        },
+  },
+  methods: {
+    enlargeImage(index) {
+      this.enlargedImageIndex = index;
+      this.showEnlargedImage = true;
     },
-    methods: {
-        enlargeImage(index) {
-          this.enlargedImageIndex = index;
-          this.showEnlargedImage = true;
-        },
-        minimizeImage() {
-          this.showEnlargedImage = false;
-        },
-        nextImage() {
-          this.enlargedImageIndex++;
-        },
-        prevImage() {
-          this.enlargedImageIndex--;
-        },
+    minimizeImage() {
+      this.showEnlargedImage = false;
     },
+    nextImage() {
+      if (this.enlargedImageIndex >= this.imagedata.length - 1) {
+        this.enlargedImageIndex = 0;
+        return;
+      }
+      this.enlargedImageIndex++;
+    },
+    prevImage() {
+      if (this.enlargedImageIndex <= 0) {
+        this.enlargedImageIndex = this.imagedata.length - 1;
+        return;
+      }
+      this.enlargedImageIndex--;
+    },
+  },
 };
 </script>
 
@@ -145,9 +168,30 @@ export default {
   transform: scale(1.15);
 }
 
+.tag-selector-input {
+  background-color: $background;
+  color: $text;
+}
+
+.tag-selector-input:focus {
+  background-color: $background;
+  color: $text;
+}
+
+.tag-selector {
+  width: 30%;
+  margin-left: auto;
+  margin-bottom: 1em;
+}
+
 @media (max-width: 768px) {
   .header h1 {
     font-size: 15vw;
+  }
+  .tag-selector {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 1em;
   }
 }
 </style>
