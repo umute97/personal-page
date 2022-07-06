@@ -47,10 +47,10 @@ export default {
           case 'Escape':
             this.$emit('minimizeImage');
             break;
-          case 'left arrow':
+          case 'ArrowLeft':
             this.$emit('prevImage');
             break;
-          case 'right arrow':
+          case 'ArrowRight':
             this.$emit('nextImage');
             break;
 
