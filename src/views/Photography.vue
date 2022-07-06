@@ -40,43 +40,51 @@
 </template>
 
 <script>
-import ZoomedView from '../components/ZoomedView.vue';
+import ZoomedView from "../components/ZoomedView.vue";
 import data from "../imagemeta.json";
 
 export default {
-    name: 'Photography',
-    components: {ZoomedView},
-    data() {
-      return {
-        enlargedImageIndex: 0,
-        showEnlargedImage: false,
-        imagedata: data,
-      };
+  name: "Photography",
+  components: { ZoomedView },
+  data() {
+    return {
+      enlargedImageIndex: 0,
+      showEnlargedImage: false,
+      imagedata: data,
+    };
+  },
+  computed: {
+    images() {
+      var paths = [];
+      for (const x of this.imagedata) {
+        paths.push(x.imagePath);
+      }
+      return paths;
     },
-    computed: {
-        images() {
-            var paths = [];
-            for (const x of this.imagedata) {
-                paths.push(x.imagePath);
-            }
-            return paths;
-        },
+  },
+  methods: {
+    enlargeImage(index) {
+      this.enlargedImageIndex = index;
+      this.showEnlargedImage = true;
     },
-    methods: {
-        enlargeImage(index) {
-          this.enlargedImageIndex = index;
-          this.showEnlargedImage = true;
-        },
-        minimizeImage() {
-          this.showEnlargedImage = false;
-        },
-        nextImage() {
-          this.enlargedImageIndex++;
-        },
-        prevImage() {
-          this.enlargedImageIndex--;
-        },
+    minimizeImage() {
+      this.showEnlargedImage = false;
     },
+    nextImage() {
+      if (this.enlargedImageIndex >= this.imagedata.length - 1) {
+        this.enlargedImageIndex = 0;
+        return;
+      }
+      this.enlargedImageIndex++;
+    },
+    prevImage() {
+      if (this.enlargedImageIndex <= 0) {
+        this.enlargedImageIndex = this.imagedata.length - 1;
+        return;
+      }
+      this.enlargedImageIndex--;
+    },
+  },
 };
 </script>
 
