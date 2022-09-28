@@ -3,9 +3,9 @@
     <b-navbar-brand to="home">Umut</b-navbar-brand>
     <b-navbar-nav class="m-auto">
       <b-nav-item class="nav-item" to="home">Home</b-nav-item>
-      <b-nav-item class="nav-item" to="home">Skillset</b-nav-item>
+      <b-nav-item class="nav-item" to="skillset">Skillset</b-nav-item>
       <b-nav-item class="nav-item" to="photography">Photography</b-nav-item>
-      <b-nav-item class="nav-item" to="home">Contact</b-nav-item>
+      <b-nav-item class="nav-item" to="contact">Contact</b-nav-item>
     </b-navbar-nav>
   </b-navbar>
 </template>

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Photography from '../views/Photography.vue'
+import ComingSoon from '../views/ComingSoon.vue'
 
 Vue.use(VueRouter)
 
@@ -13,6 +14,16 @@ const routes = [
   {
     path: '*',
     redirect: '/home'
+  },
+  {
+    path: '/skillset',
+    name: "ComingSoon",
+    component: ComingSoon,
+  },
+  {
+    path: '/contact',
+    name: "ComingSoon",
+    component: ComingSoon,
   },
   {
     path: '/home',
