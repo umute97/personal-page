@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Photography from '../views/Photography.vue'
 import ComingSoon from '../views/ComingSoon.vue'
+import Contact from '../views/Contact.vue'
 
 Vue.use(VueRouter)
 
@@ -22,8 +23,8 @@ const routes = [
   },
   {
     path: '/contact',
-    name: "ComingSoon",
-    component: ComingSoon,
+    name: "Contact",
+    component: Contact,
   },
   {
     path: '/home',
