@@ -31,6 +31,7 @@
 import { BIcon, BIconInstagram, BIconGithub } from 'bootstrap-vue';
 export default {
   name: 'Home',
+  title: "Home | Umut Elicabuk",
   components: {
     BIcon,
     BIconInstagram,

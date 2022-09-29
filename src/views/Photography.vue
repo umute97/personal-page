@@ -45,6 +45,7 @@ import data from "../imagemeta.json";
 
 export default {
   name: "Photography",
+  title: "Photography | Umut Elicabuk",
   components: { ZoomedView },
   data() {
     return {

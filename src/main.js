@@ -6,6 +6,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import { BootstrapVueIcons } from 'bootstrap-vue'
+import titleMixin from './plugins/titleMixin.js'
 
 Vue.config.productionTip = false
 
@@ -16,3 +17,4 @@ new Vue({
 }).$mount('#app')
 
 Vue.use(BootstrapVueIcons)
+Vue.mixin(titleMixin)
