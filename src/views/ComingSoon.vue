@@ -32,6 +32,12 @@ export default {
   text-align: center;
   font-size: 6em;
   font-weight: bold;
+
+  transition: transform 150ms cubic-bezier(0.57, -1.3, 0.34, 2.28) 0ms;
+}
+
+.comingsoon h1:hover {
+  transform: scale(1.05);
 }
 
 .comingsoon p {
