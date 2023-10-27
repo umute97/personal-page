@@ -1,41 +1,28 @@
 <template>
-  <b-navbar class="navbar" toggleable="lg" type="dark" variant="primary">
-    <b-navbar-brand to="home">Umut</b-navbar-brand>
-    <b-navbar-nav class="m-auto">
-      <b-nav-item class="nav-item" to="home">Home</b-nav-item>
-      <b-nav-item class="nav-item" to="skillset">Skillset</b-nav-item>
-      <b-nav-item class="nav-item" to="photography">Photography</b-nav-item>
-      <b-nav-item class="nav-item" to="contact">Contact</b-nav-item>
-    </b-navbar-nav>
-  </b-navbar>
+  <nav id="navbar">
+    <article>
+      <router-link to="home">
+        <logo />
+      </router-link>
+      <ul>
+        <li><router-link to="home">Home</router-link></li>
+        <li><router-link to="skills">Skillset</router-link></li>
+        <li><router-link to="photography">Photography</router-link></li>
+        <li><router-link to="contact">Contact</router-link></li>
+      </ul>
+    </article>
+  </nav>
 </template>
 
-<script>
+<script lang="ts">
+import Logo from "@/assets/logo.vue";
+
 export default {
   name: "NavBar",
+  components: {
+    Logo,
+  }
 };
 </script>
 
-<style lang="scss">
-.nav-item {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    color: $text;
-    position: relative;
-}
-
-.nav-item::after {
-  content: '';
-  position: absolute;
-  bottom: 0%;
-  width: 0%;
-  height: 1px;
-  background: $text;
-  transition: width 300ms;
-}
-
-.nav-item:hover::after,
-.nav-item:focus::after {
-  width: 100%;
-}
-</style>
+<style></style>

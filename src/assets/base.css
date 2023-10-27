@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --color-primary: #826e56;
+  --color-background-dark: #1e1e1e;
+  --color-background-light: #fff;
+  --color-text-dark: #fff;
+  --color-text-light: #1e1e1e;
+}
+
+:root {
+  --max-content-width-lg: 1080px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  color: var(--color-text-dark);
+  background: var(--color-background-dark);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-size: 1.3rem;
+  font-family:
+    'Outfit',
+    Arial, Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 1.5rem;
+  }
+  
+}

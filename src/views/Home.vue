@@ -1,41 +1,43 @@
 <template>
-  <div class="home">
-    <div class="short-desc">
-      <h2>Hi, the name's</h2>
-      <h1 class="second-line-title-short-desc">
-        <span class="glitch">U</span>mut.
-      </h1>
-      <h2>Pleasure meeting you!</h2>
-      <p>
-        Long story short: I'm a charismatic particle physicist currently working
-        at getting that PhD going. <br />
-        In love with DSLR photography, coding and solving problems in general.
-        <br /><br />
-        Better in person, so let's meet!
-      </p>
-      <span class="mr-2">Follow me on</span>
-      <a
-        class="hop"
-        v-for="(social, i) in socials"
-        :key="i"
-        :href="social.link"
-      >
-        <b-icon class="mx-2" :icon="social.icon"></b-icon>
-      </a>
-    </div>
-    <b-img alt="That's me!" src="@/assets/images/profile-picture.jpg"></b-img>
-  </div>
+  <main id="home">
+    <article class="intro">
+      <header>
+        <h2>Hi, the name's</h2>
+        <h1 class="hop">
+          <span class="glitch mr">U</span>mut.
+        </h1>
+        <h2>Pleasure meeting you!</h2>
+      </header>
+      <section>
+        <p>
+          Long story short: I'm a charismatic particle physicist currently working
+          at getting that PhD going.
+        </p>
+        <p>
+          In love with DSLR photography, coding and solving problems in general.
+        </p>
+        <p>
+          Better in person, so let's meet!
+        </p>
+        <p>
+          Follow me on
+          <a class="hop" v-for="(social, i) in socials" :key="i" :href="social.link">
+            <icon :name="social.icon" />
+          </a>
+        </p>
+      </section>
+    </article>
+    <img src="@/assets/images/profile-picture.jpg" alt="That's me!">
+  </main>
 </template>
 
-<script>
-import { BIcon, BIconInstagram, BIconGithub } from 'bootstrap-vue';
+<script lang="ts">
+import Icon from '@/components/Icon.vue';
 export default {
   name: 'Home',
   title: "Home | Umut Elicabuk",
   components: {
-    BIcon,
-    BIconInstagram,
-    BIconGithub,
+    Icon,
   },
   data() {
     return {
@@ -47,70 +49,3 @@ export default {
   },
 };
 </script>
-
-<style scoped lang="scss">
-.hop {
-  display: inline-block;
-  color: $text;
-  transition: transform 120ms cubic-bezier(0.42, -0.47, 0.74, 0.05) 0ms;
-}
-
-.hop:hover,
-.hop:focus {
-  color: $primary;
-  transform: scale(1.2);
-  outline: none;
-}
-
-.home {
-  padding-top: 4em;
-  display: grid;
-  grid-auto-flow: column;
-  place-items: center;
-  margin: 0 auto;
-  max-width: 90%;
-  gap: 3em;
-}
-
-.short-desc h2 {
-  font-size: 2em;
-}
-
-.short-desc h1 {
-  display: inline-block;
-  font-size: 8em;
-  font-weight: bold;
-  text-align: start;
-
-  transition: transform 150ms cubic-bezier(0.57, -1.3, 0.34, 2.28) 0ms;
-}
-
-.short-desc h1:hover {
-  transform: scale(1.05);
-}
-
-img {
-  max-height: 28em;
-  border: 1px solid white;
-  border-radius: 2rem;
-}
-
-.glitch {
-  text-shadow: 0.07em 0.07em $primary;
-}
-
-@media (max-width: 768px) {
-  .home {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .short-desc h1 {
-    font-size: 22vw;
-  }
-
-  img {
-    margin: 2em auto;
-  }
-}
-</style>

@@ -4,7 +4,7 @@
     <p>My minions are still working on this site. Stay tuned!</p>
   </div>
 </template>
-<script>
+<script lang="ts">
 export default {
   name:"ComingSoon",
   title: "Coming Soon | Umut Elicabuk",
