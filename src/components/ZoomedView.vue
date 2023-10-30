@@ -1,38 +1,41 @@
 <template>
-  <div class="overlay" v-if="enlarged">
-    <div class="topbar">
-      <div class="image-title-area">
-        <span>{{ title }}</span>
+  <div id="image-viewer" v-if="enlarged">
+    <nav>
+      <h2>{{ title }}</h2>
+      <div class="tag-area">
+        <span>Tags: </span>
+        <span v-for="tag in tags" :key="tag" class="tag">{{ tag }}</span>
       </div>
-      <div class="tag-list-area">
-        <span class="mr-2">Tags:</span>
-        <!-- <b-btn
-          pill
-          variant="primary"
-          class="mx-2"
-          v-for="(tag, i) in tags"
-          :key="i"
-          >{{ tag }}</b-btn
-        > -->
+      <div class="close-button">
+        <icon name="close" @click="$emit('minimizeImage')" id="close" />
       </div>
-      <div class="close-button-area">
-        <!-- <b-icon
-          @click="$emit('minimizeImage')"
-          class="mx-2 close-button"
-          font-scale="2"
-          icon="X"
-        ></b-icon> -->
-      </div>
-    </div>
-    <div @click="$emit('minimizeImage')" class="image-area">
-      <img :src="imagePath" />
+    </nav>
+    <div class="fullscreen-image">
+      <img :src="imagePath" alt="Enlarged Image">
     </div>
   </div>
 </template>
+
 <script lang="ts">
+import Icon from '@/components/Icon.vue';
 export default {
-  name: 'ZoomedView',
-  props: ['index', 'imagedata', 'enlarged'],
+  props: {
+    index: {
+      type: Number,
+      required: true
+    },
+    imagedata: {
+      type: Object,
+      required: true
+    },
+    enlarged: {
+      type: Boolean,
+      required: true
+    }
+  },
+  components: {
+    Icon
+  },
   created() {
     // Key controls for gallery
     window.addEventListener('keydown', (event) => {
@@ -63,7 +66,5 @@ export default {
       return this.imagedata[this.index].imagePath;
     },
   },
-};
+}
 </script>
-<style lang="scss">
-</style>

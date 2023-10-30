@@ -54,7 +54,7 @@ export default {
     },
   },
   methods: {
-    enlargeImage(index) {
+    enlargeImage(index: number) {
       this.enlargedImageIndex = index;
       this.showEnlargedImage = true;
     },

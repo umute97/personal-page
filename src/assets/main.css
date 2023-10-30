@@ -147,6 +147,7 @@ a:focus {
 
 .gallery-item {
     overflow: hidden;
+    cursor: pointer;
 }
 
 .gallery-image {
@@ -172,4 +173,61 @@ a:focus {
     #photography .intro h2 {
         font-size: 2.5rem;
     }
+}
+
+/** Enlarged image view **/
+#image-viewer {
+    --bar-height: 4rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#image-viewer nav {
+    display: flex;
+    height: var(--bar-height);
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    align-items: center;
+}
+
+#image-viewer nav .tag-area {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+#image-viewer nav .tag {
+    color: var(--color-text-dark);
+    background: var(--color-primary);
+    border-radius: 1rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.fullscreen-image {
+    display: grid;
+    place-items: center;
+    height: calc(100dvh - var(--bar-height));
+}
+
+.fullscreen-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+#image-viewer #close {
+    margin-top: 0.5rem;
+    stroke: #fff;
+    cursor: pointer;
+    transition: stroke 120ms ease-out 0s;
+}
+
+#image-viewer #close:hover {
+    stroke: var(--color-primary);
 }
