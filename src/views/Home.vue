@@ -2,7 +2,7 @@
   <main id="home">
     <article class="intro">
       <header>
-        <h2>Hi, the name's</h2>
+        <h2>Hi, my name is</h2>
         <h1 class="hop">
           <span class="glitch mr">U</span>mut.
         </h1>
@@ -10,11 +10,10 @@
       </header>
       <section>
         <p>
-          Long story short: I'm a charismatic particle physicist currently working
-          at getting that PhD going.
+          I'm a <a class="breakout" href="https://github.com/umute97">software developer</a> and <a class="breakout">physicist</a> from Germany.
         </p>
         <p>
-          In love with DSLR photography, coding and solving problems in general.
+          Currently working on my PhD in silicon detector physics at the <a class="breakout" href="https://home.cern/science/experiments/cms">CMS Experiment</a> (CERN) and expect to finish in February 2025.
         </p>
         <p>
           Better in person, so let's meet!

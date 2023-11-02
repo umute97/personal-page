@@ -12,6 +12,10 @@ h1 * {
     font-weight: bold;
 }
 
+a:visited {
+    color: var(--color-text-dark);
+}
+
 /** Global **/
 .main-content {
     max-width: var(--max-content-width-lg);
@@ -39,6 +43,25 @@ a:focus {
 
 .mr {
     margin-right: 0.2rem;
+}
+
+.breakout,
+.breakout:hover {
+    white-space: nowrap;
+    padding: 0 0.5rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 0.5rem;
+    transition: all 120ms ease-out 0s;
+}
+
+.breakout:hover {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+a.breakout,
+a.breakout:hover {
+    text-decoration: none;
 }
 
 /** Navbar **/
@@ -117,6 +140,10 @@ a:focus {
     margin-left: 0.5rem;
     stroke-width: 1rem;
     fill: var(--color-primary);
+}
+
+.intro section p {
+    margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 768px) {
