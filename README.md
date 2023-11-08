@@ -1,40 +1,11 @@
-# personal-page
+# personal-page 
+<a href="https://github.com/umute97/personal-page" title="Go to GitHub repo"><img src="https://img.shields.io/static/v1?label=umute97&message=personal-page&color=green&logo=github" alt="umute97 - personal-page"></a>
+<a href="https://github.com/umute97/personal-page/releases/"><img src="https://img.shields.io/github/tag/umute97/personal-page?include_prereleases=&sort=semver&color=green" alt="GitHub tag"></a>
+<a href="https://github.com/umute97/personal-page"><img src="https://img.shields.io/github/stars/umute97/personal-page?style=social" alt="stars - personal-page"></a>
+<a href="https://github.com/umute97/personal-page"><img src="https://img.shields.io/github/forks/umute97/personal-page?style=social" alt="forks - personal-page"></a>
+<a href="https://v3.vuejs.org" title="Go to Vue homepage"><img src="https://img.shields.io/badge/Vue-3-blue?logo=vue.js&logoColor=white" alt="Made with Vue"></a>
+<img src="https://img.shields.io/badge/made-with_love-red" alt="maintained - with love">
 
-This template should help get you started developing with Vue 3 in Vite.
+A personal webpage about me (´｡• ᵕ •｡`) ♡
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
+At the moment only hosted at [the CERN webspace](https://umute.web.cern.ch/).
