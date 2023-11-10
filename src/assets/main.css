@@ -12,8 +12,15 @@ h1 * {
     font-weight: bold;
 }
 
+a,
 a:visited {
     color: var(--color-text-dark);
+}
+
+.glitch,
+a:hover,
+a:focus {
+    text-shadow: 0.07em 0.07em var(--color-primary);
 }
 
 /** Global **/
@@ -33,12 +40,6 @@ a:visited {
 .hop:focus {
     transform: scale(1.2);
     outline: none;
-}
-
-.glitch,
-a:hover,
-a:focus {
-    text-shadow: 0.07em 0.07em var(--color-primary);
 }
 
 .mr {
@@ -261,20 +262,20 @@ a.breakout:hover {
 
 /** Coming soon **/
 .comingsoon {
-  display: block;
-  padding-top: 8em;
-  margin: 0 auto;
-  max-width: 50em;
+    display: block;
+    padding-top: 8em;
+    margin: 0 auto;
+    max-width: 50em;
 }
 
 .comingsoon h1 {
-  margin: 0 auto;
-  text-align: center;
-  font-size: 6em;
-  font-weight: bold;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 6em;
+    font-weight: bold;
 }
 
 .comingsoon p {
-  text-align: center;
-  margin-top: 1em;
+    text-align: center;
+    margin-top: 1em;
 }
