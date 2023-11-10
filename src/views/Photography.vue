@@ -21,26 +21,26 @@
     </article>
     <article class="gallery">
       <div class="gallery-item" v-for="(image, i) of images" :key="i">
-        <img class="gallery-image" :src="image" @click="enlargeImage(i)" />
+        <img class="gallery-image" :src="image" /> <!-- @click="enlargeImage(i)" /> -->
       </div>
     </article>
-    <ZoomedView :index="enlargedImageIndex" :imagedata="imagedata" :enlarged="showEnlargedImage"
-      @minimizeImage="minimizeImage()" @prevImage="prevImage()" @nextImage="nextImage()" />
+    <!-- <ZoomedView :index="enlargedImageIndex" :imagedata="imagedata" :enlarged="showEnlargedImage"
+      @minimizeImage="minimizeImage()" @prevImage="prevImage()" @nextImage="nextImage()" /> -->
   </main>
 </template>
 
 <script lang="ts">
-import ZoomedView from "../components/ZoomedView.vue";
+// import ZoomedView from "../components/ZoomedView.vue";
 import data from "@/imagemeta.json";
 
 export default {
   name: "Photography",
   title: "Photography | Umut Elicabuk",
-  components: { ZoomedView },
+  // components: { ZoomedView },
   data() {
     return {
-      enlargedImageIndex: 0,
-      showEnlargedImage: false,
+      // enlargedImageIndex: 0,
+      // showEnlargedImage: false,
       imagedata: data,
     };
   },
@@ -54,27 +54,27 @@ export default {
     },
   },
   methods: {
-    enlargeImage(index: number) {
-      this.enlargedImageIndex = index;
-      this.showEnlargedImage = true;
-    },
-    minimizeImage() {
-      this.showEnlargedImage = false;
-    },
-    nextImage() {
-      if (this.enlargedImageIndex >= this.imagedata.length - 1) {
-        this.enlargedImageIndex = 0;
-        return;
-      }
-      this.enlargedImageIndex++;
-    },
-    prevImage() {
-      if (this.enlargedImageIndex <= 0) {
-        this.enlargedImageIndex = this.imagedata.length - 1;
-        return;
-      }
-      this.enlargedImageIndex--;
-    },
+    // enlargeImage(index: number) {
+    //   this.enlargedImageIndex = index;
+    //   this.showEnlargedImage = true;
+    // },
+    // minimizeImage() {
+    //   this.showEnlargedImage = false;
+    // },
+    // nextImage() {
+    //   if (this.enlargedImageIndex >= this.imagedata.length - 1) {
+    //     this.enlargedImageIndex = 0;
+    //     return;
+    //   }
+    //   this.enlargedImageIndex++;
+    // },
+    // prevImage() {
+    //   if (this.enlargedImageIndex <= 0) {
+    //     this.enlargedImageIndex = this.imagedata.length - 1;
+    //     return;
+    //   }
+    //   this.enlargedImageIndex--;
+    // },
   },
 };
 </script>

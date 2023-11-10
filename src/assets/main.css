@@ -175,7 +175,7 @@ a.breakout:hover {
 
 .gallery-item {
     overflow: hidden;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .gallery-image {
