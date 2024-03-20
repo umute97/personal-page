@@ -10,10 +10,14 @@
       </header>
       <section>
         <p>
-          I'm a <a class="breakout" href="https://github.com/umute97">software developer</a> and <a class="breakout">physicist</a> from Germany.
+          I'm a <a class="breakout" href="https://github.com/umute97">software developer</a> and <span
+            class="breakout">physicist</span> from Germany (he/she).
         </p>
         <p>
-          Currently working on my PhD in silicon detector physics at the <a class="breakout" href="https://home.cern/science/experiments/cms">CMS Experiment</a> (CERN) and expect to finish in February 2025.
+          Currently working on my PhD in silicon detector physics at the <a class="breakout"
+            href="https://home.cern/science/experiments/cms">CMS Group</a> of the <a class="breakout"
+            href="https://www.etp.kit.edu/">ETP</a> in Karlsruhe and expect to finish in <span class="breakout">February
+            2025</span>.
         </p>
         <p>
           Better in person, so let's meet!
