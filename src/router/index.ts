@@ -1,6 +1,7 @@
 import ComingSoonVue from '@/views/ComingSoon.vue'
 import HomeVue from '@/views/Home.vue'
 import PhotographyVue from '@/views/Photography.vue'
+import Showcase from '@/views/Showcase.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -13,8 +14,8 @@ const router = createRouter({
     },
     {
       path: '/skills',
-      name: 'Skills',
-      component: ComingSoonVue,
+      name: 'Showcase',
+      component: Showcase,
     },
     {
       path: '/contact',

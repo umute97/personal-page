@@ -65,6 +65,22 @@ a.breakout:hover {
     text-decoration: none;
 }
 
+.accent {
+    background: var(--color-accent);
+    color: var(--color-text-accent);
+}
+
+.accent:hover {
+    background: var(--color-accent-dark);
+}
+
+.btn {
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+    transition: all 120ms ease-out 0s;
+}
+
+
 /** Navbar **/
 #navbar {
     border-bottom: 1px solid var(--color-primary);
@@ -278,4 +294,75 @@ a.breakout:hover {
 .comingsoon p {
     text-align: center;
     margin-top: 1em;
+}
+
+/** Showcase Item **/
+.showcase-item {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "image title"
+        "image desc"
+        "image footer";
+    padding: 1rem;
+    margin-top: 2rem;
+    background: var(--color-background-dark-200);
+    transition: transform 120ms ease-out 0s;
+}
+
+.showcase-item:hover,
+.showcase-item:focus {
+    box-shadow: 0 0 1rem var(--color-primary)
+}
+
+.showcase-title {
+    grid-area: title;
+    font-size: 1.6rem;
+}
+value
+.showcase-desc {
+    grid-area: desc;
+    font-size: 1.2rem;
+}
+
+.showcase-image {
+    grid-area: image;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.showcase-item footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav[role="tablist"] {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+
+nav[role="tablist"] > a {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background: var(--color-background-dark-200);
+    color: var(--color-text-dark);
+    transition: all 120ms ease 0s;
+    cursor: pointer;
+}
+
+nav[role="tablist"] > a:hover,
+nav[role="tablist"] > a:focus {
+    background: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+nav[role="tablist"] > .active {
+    background: var(--color-primary);
+    color: var(--color-text-light);
 }

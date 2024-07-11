@@ -3,7 +3,11 @@
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
   --color-primary: #906129;
+  --color-accent: #41a9ea;
+  --color-accent-dark: #2f7ebc;
+  --color-text-accent: #fff;
   --color-background-dark: #1e1e1e;
+  --color-background-dark-200: #2e2e2e;
   --color-background-light: #fff;
   --color-text-dark: #fff;
   --color-text-light: #1e1e1e;
