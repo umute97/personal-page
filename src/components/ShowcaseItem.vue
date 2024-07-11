@@ -1,18 +1,22 @@
 <template>
     <article class="showcase-item">
         <img class="showcase-image" :src="img" />
-        <h2 class="showcase-title">{{ title }}</h2>
+        <header>
+            <h2 class="showcase-title">{{ title }}</h2>
+            <a :href="link" target="_blank" rel="noopener noreferrer">
+                <div class="btn accent">{{ actionText }}</div>
+            </a>
+        </header>
         <p class="showcase-desc">{{ desc }}</p>
-        <footer>
-            <div class="btn accent">Visit</div>
-        </footer>
     </article>
 </template>
 
 <script lang="ts" setup>
 defineProps<{
-    title: string;
-    desc: string;
-    img: string;
+    title: string,
+    desc: string,
+    img: string,
+    link: string,
+    actionText: string,
 }>();
 </script>

@@ -15,6 +15,7 @@ h1 * {
 a,
 a:visited {
     color: var(--color-text-dark);
+    text-decoration: none;
 }
 
 .glitch,
@@ -75,12 +76,15 @@ a.breakout:hover {
 }
 
 .btn {
+    text-align: center;
     border-radius: 0.5rem;
-    padding: 0 1rem;
     transition: all 120ms ease-out 0s;
 }
 
-
+a:hover .btn,
+a:focus .btn {
+    text-shadow: none;
+}
 /** Navbar **/
 #navbar {
     border-bottom: 1px solid var(--color-primary);
@@ -298,46 +302,41 @@ a.breakout:hover {
 
 /** Showcase Item **/
 .showcase-item {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-        "image title"
-        "image desc"
-        "image footer";
     padding: 1rem;
     margin-top: 2rem;
     background: var(--color-background-dark-200);
-    transition: transform 120ms ease-out 0s;
+    transition: box-shadow 120ms ease-out 0s;
 }
 
 .showcase-item:hover,
 .showcase-item:focus {
-    box-shadow: 0 0 1rem var(--color-primary)
+    box-shadow: 0 0 1rem var(--color-primary);
+    transition: box-shadow 120ms ease-out 0s;
 }
 
 .showcase-title {
-    grid-area: title;
     font-size: 1.6rem;
 }
-value
+
 .showcase-desc {
-    grid-area: desc;
     font-size: 1.2rem;
 }
 
 .showcase-image {
-    grid-area: image;
     display: block;
     width: 100%;
-    object-fit: cover;
+    margin: auto 0;
 }
 
-.showcase-item footer {
-    grid-area: footer;
+.showcase-item header {
+    margin: 1rem 0;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: space-between;
+}
+
+.showcase-item header .btn {
+    padding: 0 1rem;
+    text-align: center;
 }
 
 nav[role="tablist"] {
