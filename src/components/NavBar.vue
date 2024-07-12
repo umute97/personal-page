@@ -6,7 +6,7 @@
       </router-link>
       <ul>
         <li><router-link to="home">Home</router-link></li>
-        <li><router-link to="skills">Skillset</router-link></li>
+        <li><router-link to="showcase">Showcase</router-link></li>
         <li><router-link to="photography">Photography</router-link></li>
         <li><router-link to="contact">Contact</router-link></li>
       </ul>

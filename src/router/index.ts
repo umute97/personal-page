@@ -13,7 +13,7 @@ const router = createRouter({
       redirect: 'Home'
     },
     {
-      path: '/skills',
+      path: '/showcase',
       name: 'Showcase',
       component: Showcase,
     },
