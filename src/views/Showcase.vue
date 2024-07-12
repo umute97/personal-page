@@ -3,7 +3,7 @@
         <Tab v-for="tab in tabs" :key="tab.title" :isActive="tab.isActive">
             {{ tab.content }}
             <ShowcaseItem v-for="item in tab.items" :key="item.title" :title="item.title" :desc="item.desc"
-                :img="item.img" :link="item.link" :action-text="tab.actionText" />
+                :img="item.img" :link="item.link" :action-text="item.actionText" />
         </Tab>
     </TabPane>
 </template>
@@ -22,7 +22,7 @@ const selectedIndex = ref(0)
 
 const tabs = ref([
     {
-        title: "Projects", isActive: true, actionText: "Check it out",
+        title: "Projects", isActive: true,
         content: "Whenever I had some time during research I tried to expand my tech knowledge building some apps and trying out different \
         frameworks. Vue really stuck with me so most of them I built using that but I always try something new for each project I take on. \
         I did a ton of data analysis but those analyses aren't as flashy as the projects here.", items: [
@@ -32,6 +32,7 @@ const tabs = ref([
                 Works quite well even though it was one of my first frontend projects. It's built with Vue3 + TypeScript and vanilla CSS.",
                 img: "https://i.imgur.com/LAqmud6.png",
                 link: "https://github.com/umute97/siri-gui",
+                actionText: "Check it out"
             },
             {
                 title: "mcgui",
@@ -41,12 +42,14 @@ const tabs = ref([
                 actually works and a lot of testing.",
                 img: "https://i.imgur.com/O3Hrn14.png",
                 link: "https://gitlab.cern.ch/kit-cms/measurementcontrol/MeasurementControl-GUI",
+                actionText: "Check it out"
             },
             {
                 title: "personal page",
                 desc: "The page you are looking at right now. I built it with Vue3 + vanilla CSS.",
                 img: "https://i.imgur.com/YcGOKEb.png",
                 link: "https://github.com/umute97/personal-page",
+                actionText: "Check it out"
             },
         ]
     },
@@ -60,6 +63,7 @@ const tabs = ref([
                 In addition, charge collection properties and annealing behavior were investigated.",
                 img: "https://i.imgur.com/Jo9iQKk.png",
                 link: "https://publish.etp.kit.edu/record/21760",
+                actionText: "Read"
             },
             {
                 title: "Development of an Iterative Irradiation Setup and Online Beam Monitor for Silicon Sensor Irradiation Studies",
@@ -69,23 +73,41 @@ const tabs = ref([
                 proton irradiations were used to characterize the setup.",
                 img: "https://i.imgur.com/w7KzGfX.png",
                 link: "https://publish.etp.kit.edu/record/22080",
+                actionText: "Read"
             },
         ]
     },
     {
-        title: "Skills", isActive: false, actionText: "Learn more",
-        content: "Technologies I am familiar with:", items: [
+        title: "Skills", isActive: false,
+        content: "I have a good grasp on tech stuff in general and am a quick learner but here are some of the technologies I am \
+        particularly experienced with.", items: [
             {
-                title: "Skill 1",
-                desc: "Description 1",
-                img: "https://via.placeholder.com/16x9",
-                link: "https://via.placeholder.com/16x9",
+                title: "frontend",
+                desc: "The usual suspects: HTML, CSS, TypeScript. I am quite comfortable with Vue3 (started out with Vue2) and I am \
+                currently learning more about UX/UI design. Learned figma for that. You know what they say: If you can't design it, \
+                you can't build it. Why don't you check out my 10 day CSS challenge (wanted to do 30 but they get repetitive really quick).",
+                img: "https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076536_1280.jpg",
+                link: "https://100dayscss.com/progress/umute97/",
+                actionText: "10 day CSS"
             },
             {
-                title: "Skill 2",
-                desc: "Description 2",
-                img: "https://via.placeholder.com/16x9",
-                link: "https://via.placeholder.com/16x9",
+                title: "backend and data analysis",
+                desc: "I am more than proficient in Python, especially in the scientific stack. I did a lot of data analysis during my \
+                days in research and have built many different full stack applications with Flask, Django and my frontend framework of \
+                choice. I am more concerned with getting it right rather than getting it fast but usually, I manage to do both.",
+                img: "https://images.unsplash.com/photo-1599658880436-c61792e70672",
+            },
+            {
+                title: "docker",
+                desc: "I have used docker for almost all of my projects and administrated the swarm cluster at my old institute. I am \
+                very comfortable with it, even though it can be a pain sometimes. Containerize all the things!",
+                img: "https://wallpapercave.com/wp/wp7718117.jpg",
+            },
+            {
+                title: "silicon technology",
+                desc: "Well, I got a bachelor's, master's and soon a PhD in it. Got a question? I probably have an answer. I have worked \
+                with silicon detectors for 6 years now. I gained a lot of knowledge about hardware, electronics and the physics behind it all.",
+                img: "https://bregnery.github.io/images/RSD_umut.png",
             },
         ]
     },
