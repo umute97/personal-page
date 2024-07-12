@@ -45,7 +45,7 @@ export default {
   data() {
     return {
       socials: [
-        { icon: 'instagram', link: 'https://instagram.com/esistderboss' },
+        { icon: 'instagram', link: 'https://instagram.com/kiss.me.bliss' },
         { icon: 'github', link: 'https://github.com/umute97' },
       ],
     };
