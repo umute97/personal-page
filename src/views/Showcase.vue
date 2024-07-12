@@ -87,6 +87,8 @@ const tabs = ref([
                 currently learning more about UX/UI design. Learned figma for that. You know what they say: If you can't design it, \
                 you can't build it.",
                 img: "https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076536_1280.jpg",
+                link: "none",
+                actionText: "none"
             },
             {
                 title: "backend and data analysis",
@@ -94,18 +96,24 @@ const tabs = ref([
                 days in research and have built many different full stack applications with Flask, Django and my frontend framework of \
                 choice. I am more concerned with getting it right rather than getting it fast but usually, I manage to do both.",
                 img: "https://images.unsplash.com/photo-1599658880436-c61792e70672",
+                link: "none",
+                actionText: "none"
             },
             {
                 title: "docker",
                 desc: "I have used docker for almost all of my projects and administrated the swarm cluster at my old institute. I am \
                 very comfortable with it, even though it can be a pain sometimes. Containerize all the things!",
                 img: "https://wallpapercave.com/wp/wp7718117.jpg",
+                link: "none",
+                actionText: "none"
             },
             {
                 title: "silicon technology",
                 desc: "Well, I got a bachelor's, master's and soon a PhD in it. Got a question? I probably have an answer. I have worked \
                 with silicon detectors for 6 years now. I gained a lot of knowledge about hardware, electronics and the physics behind it all.",
                 img: "https://bregnery.github.io/images/RSD_umut.png",
+                link: "none",
+                actionText: "none"
             },
         ]
     },
