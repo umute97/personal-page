@@ -85,10 +85,8 @@ const tabs = ref([
                 title: "frontend",
                 desc: "The usual suspects: HTML, CSS, TypeScript. I am quite comfortable with Vue3 (started out with Vue2) and I am \
                 currently learning more about UX/UI design. Learned figma for that. You know what they say: If you can't design it, \
-                you can't build it. Why don't you check out my 10 day CSS challenge (wanted to do 30 but they get repetitive really quick).",
+                you can't build it.",
                 img: "https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076536_1280.jpg",
-                link: "https://100dayscss.com/progress/umute97/",
-                actionText: "10 day CSS"
             },
             {
                 title: "backend and data analysis",
