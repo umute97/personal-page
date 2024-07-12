@@ -35,7 +35,7 @@ const tabs = ref([
             },
             {
                 title: "mcgui",
-                desc: "Someone at my institute build a GUI for the measurements we do in the lab. I took it and made it better first, \
+                desc: "Someone at my institute built a GUI for the measurements we do in the lab. I took it and made it better first, \
                 solving a bunch of problems with it but it wasn't enough. So I built a new one from scratch, trying to keep the old \
                 format as best as possible since people in the lab were used to it. Vue3 + TypeScript, Naive UI Framework, a CI/CD that \
                 actually works and a lot of testing.",
