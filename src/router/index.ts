@@ -1,4 +1,5 @@
 import ComingSoonVue from '@/views/ComingSoon.vue'
+import Contact from '@/views/Contact.vue'
 import HomeVue from '@/views/Home.vue'
 import PhotographyVue from '@/views/Photography.vue'
 import Showcase from '@/views/Showcase.vue'
@@ -20,7 +21,7 @@ const router = createRouter({
     {
       path: '/contact',
       name: 'Contact',
-      component: ComingSoonVue,
+      component: Contact,
     },
     {
       path: '/home',
