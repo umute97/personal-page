@@ -14,7 +14,8 @@
 }
 
 :root {
-  --max-content-width-lg: 800px;
+  --max-content-width-lg: 1080px;
+  --max-content-width-md: 720px;
 }
 
 ::selection {
