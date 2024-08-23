@@ -375,6 +375,11 @@ nav[role="tablist"] > .active {
     text-align: center;
 }
 
+.contact-form {
+    max-width: var(--max-content-width-md);
+    margin: 0 auto;
+}
+
 .contact-form form {
     display: flex;
     flex-direction: column;
