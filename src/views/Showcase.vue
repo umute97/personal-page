@@ -27,11 +27,12 @@ const tabs = ref([
         frameworks. Vue really stuck with me so most of them I built using that but I always try something new for each project I take on. \
         I did a ton of data analysis but those analyses aren't as flashy as the projects here.", items: [
             {
-                title: "siri",
-                desc: "A quick little interface I built to control the Iterative Irradiation Setup I built for my master's (see Research). \
-                Works quite well even though it was one of my first frontend projects. It's built with Vue3 + TypeScript and vanilla CSS.",
-                img: "https://i.imgur.com/LAqmud6.png",
-                link: "https://github.com/umute97/siri-gui",
+                title: "irradiation interface",
+                desc: "In order to irradiate the test structures I investigated during my time in the field \
+                I built an interface to control the x-ray irradiation setup. It's built with Vue2 on top of \
+                the Vuetify framework.",
+                img: "https://i.imgur.com/Mg9BfMj.png",
+                link: "https://gitlab.kit.edu/kit/etp/cms-hardware/software/it/x-ray/irradiation-interface",
                 actionText: "Check it out"
             },
             {
@@ -42,6 +43,14 @@ const tabs = ref([
                 actually works and a lot of testing.",
                 img: "https://i.imgur.com/O3Hrn14.png",
                 link: "https://gitlab.cern.ch/kit-cms/measurementcontrol/MeasurementControl-GUI",
+                actionText: "Check it out"
+            },
+            {
+                title: "siri",
+                desc: "A quick little interface I built to control the Iterative Irradiation Setup I built for my master's (see Research). \
+                Works quite well even though it was one of my first frontend projects. It's built with Vue3 + TypeScript and vanilla CSS.",
+                img: "https://i.imgur.com/LAqmud6.png",
+                link: "https://github.com/umute97/siri-gui",
                 actionText: "Check it out"
             },
             {
