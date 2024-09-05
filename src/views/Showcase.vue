@@ -27,6 +27,16 @@ const tabs = ref([
         frameworks. Vue really stuck with me so most of them I built using that but I always try something new for each project I take on. \
         I did a ton of data analysis but those analyses aren't as flashy as the projects here.", items: [
             {
+                title: "Piglify",
+                desc: "In my flatshare, we have to keep track of the chores each of us has to do every week. I built this app to make it \
+                easier for us to keep track of it. Every week, the chores are cyclically assigned to each of us. The app features a shopping \
+                list, too, so we can keep track of what we need to buy. Built with Vue3 + TypeScript on top of the naiveui framework. Backend \
+                is a Django REST API. User authentication is handled via authelia (an auth server with a portal). Dockerized.",
+                img: "https://i.imgur.com/cEOLEhw.png",
+                link: "https://github.com/umute97/piglify",
+                actionText: "Check it out"
+            },
+            {
                 title: "irradiation interface",
                 desc: "In order to irradiate the test structures I investigated during my time in the field \
                 I built an interface to control the x-ray irradiation setup. It's built with Vue2 on top of \
