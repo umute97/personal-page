@@ -1,11 +1,16 @@
 <template>
-    <TabPane :tabs="tabs" @selectTab="selectTab" :selectedIndex="selectedIndex" :activeClass="activeClass">
-        <Tab v-for="tab in tabs" :key="tab.title" :isActive="tab.isActive">
-            {{ tab.content }}
-            <ShowcaseItem v-for="item in tab.items" :key="item.title" :title="item.title" :desc="item.desc"
-                :img="item.img" :link="item.link" :action-text="item.actionText" />
-        </Tab>
-    </TabPane>
+    <main id="showcase">
+        <header class="intro">
+            <h1><span class="glitch">S</span>howcase</h1>
+        </header>
+        <TabPane :tabs="tabs" @selectTab="selectTab" :selectedIndex="selectedIndex" :activeClass="activeClass">
+            <Tab v-for="tab in tabs" :key="tab.title" :isActive="tab.isActive">
+                {{ tab.content }}
+                <ShowcaseItem v-for="item in tab.items" :key="item.title" :title="item.title" :desc="item.desc"
+                    :img="item.img" :link="item.link" :action-text="item.actionText" />
+            </Tab>
+        </TabPane>
+    </main>
 </template>
 
 <script lang="ts" setup>
@@ -25,13 +30,14 @@ const tabs = ref([
         title: "Projects", isActive: true,
         content: "Whenever I had some time during research I tried to expand my tech knowledge building some apps and trying out different \
         frameworks. Vue really stuck with me so most of them I built using that but I always try something new for each project I take on. \
+        All of these projects are dockerized. \
         I did a ton of data analysis but those analyses aren't as flashy as the projects here.", items: [
             {
                 title: "Piglify",
                 desc: "In my flatshare, we have to keep track of the chores each of us has to do every week. I built this app to make it \
-                easier for us to keep track of it. Every week, the chores are cyclically assigned to each of us. The app features a shopping \
+                easier. Every week, the chores are cyclically assigned to each of us. The app features a shopping \
                 list, too, so we can keep track of what we need to buy. Built with Vue3 + TypeScript on top of the naiveui framework. Backend \
-                is a Django REST API. User authentication is handled via authelia (an auth server with a portal). Dockerized.",
+                is Django. User authentication is handled via authelia (an auth server with a portal).",
                 img: "https://i.imgur.com/cEOLEhw.png",
                 link: "https://github.com/umute97/piglify",
                 actionText: "Check it out"
@@ -49,8 +55,8 @@ const tabs = ref([
                 title: "mcgui",
                 desc: "Someone at my institute built a GUI for the measurements we do in the lab. I took it and made it better first, \
                 solving a bunch of problems with it but it wasn't enough. So I built a new one from scratch, trying to keep the old \
-                format as best as possible since people in the lab were used to it. Vue3 + TypeScript, Naive UI Framework, a CI/CD that \
-                actually works and a lot of testing.",
+                format as best as possible since people in the lab were used to it. Vue3 + TypeScript, Naive UI framework and a CI/CD that \
+                actually works.",
                 img: "https://i.imgur.com/O3Hrn14.png",
                 link: "https://gitlab.cern.ch/kit-cms/measurementcontrol/MeasurementControl-GUI",
                 actionText: "Check it out"
@@ -78,17 +84,17 @@ const tabs = ref([
         my way around a silicon lab, hardware in general and overcoming frustration. Mastered the last one.", items: [
             {
                 title: "Characterization of Silicon Float Zone Material for the CMS Phase-2 Upgrade",
-                desc: "Silicon float zone material with a thickness of 290 µm was characterized in terms of its electrical properties. \
-                In addition, charge collection properties and annealing behavior were investigated.",
+                desc: "I characterized a silicon float zone material with a thickness of 290 µm in terms of its electrical properties. \
+                In addition, I investigated charge collection properties and annealing behavior.",
                 img: "https://i.imgur.com/Jo9iQKk.png",
                 link: "https://publish.etp.kit.edu/record/21760",
                 actionText: "Read"
             },
             {
                 title: "Development of an Iterative Irradiation Setup and Online Beam Monitor for Silicon Sensor Irradiation Studies",
-                desc: "In the first part, a setup was built to carry out iterative irradiations on silicon strip sensors and \
-                characterize them in situ. In the second part, an ionization chamber for online beam monitoring has been designed and built. To read out \
-                the generated ion current, a two-staged transimpedance amplifier circuit has been designed. X-ray irradiation and \
+                desc: "In the first part, I built a setup to carry out iterative irradiations on silicon strip sensors and \
+                characterize them in situ. In the second part, I designed and built an ionization chamber for online beam monitoring. To read out \
+                the generated ion current, I also designed a two-staged transimpedance amplifier circuit. X-ray irradiation and \
                 proton irradiations were used to characterize the setup.",
                 img: "https://i.imgur.com/w7KzGfX.png",
                 link: "https://publish.etp.kit.edu/record/22080",
@@ -103,8 +109,7 @@ const tabs = ref([
             {
                 title: "frontend",
                 desc: "The usual suspects: HTML, CSS, TypeScript. I am quite comfortable with Vue3 (started out with Vue2) and I am \
-                currently learning more about UX/UI design. Learned figma for that. You know what they say: If you can't design it, \
-                you can't build it.",
+                currently learning more about UX/UI design.",
                 img: "https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076536_1280.jpg",
                 link: "none",
                 actionText: "none"
@@ -112,7 +117,7 @@ const tabs = ref([
             {
                 title: "backend and data analysis",
                 desc: "I am more than proficient in Python, especially in the scientific stack. I did a lot of data analysis during my \
-                days in research and have built many different full stack applications with Flask, Django and my frontend framework of \
+                days in research and built many different full stack applications with Flask, Django and my frontend framework of \
                 choice. I am more concerned with getting it right rather than getting it fast but usually, I manage to do both.",
                 img: "https://images.unsplash.com/photo-1599658880436-c61792e70672",
                 link: "none",

@@ -215,6 +215,8 @@ a:focus .btn {
 
     #photography .intro h1,
     #photography .intro h1 *,
+    #showcase header h1,
+    #showcase header h1 *,
     #contact header h1,
     #contact header h1 * {
         font-size: 3.5rem;

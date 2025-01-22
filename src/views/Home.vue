@@ -16,7 +16,7 @@
         <p>
           Currently working on my PhD in silicon detector physics at the <a class="breakout"
             href="https://home.cern/science/experiments/cms">CMS Group</a> of the <a class="breakout"
-            href="https://www.etp.kit.edu/">ETP</a> in Karlsruhe and expect to finish in <span class="breakout">February
+            href="https://www.etp.kit.edu/">ETP</a> in Karlsruhe and expect to finish in <span class="breakout">July
             2025</span>.
         </p>
         <p>
@@ -45,7 +45,7 @@ export default {
   data() {
     return {
       socials: [
-        { icon: 'instagram', link: 'https://instagram.com/kiss.me.bliss' },
+        { icon: 'linkedin', link: 'https://www.linkedin.com/in/umut-elicabuk-19b470276/' },
         { icon: 'github', link: 'https://github.com/umute97' },
       ],
     };

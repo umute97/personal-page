@@ -15,8 +15,7 @@
         with technical knowledge.
       </p>
       <p>
-        I invite you to take a look at a few of my favorite memories below
-        (click on them!).
+        I invite you to take a look at a few of my favorite memories below.
       </p>
     </article>
     <article class="gallery">
