@@ -431,6 +431,12 @@ nav[role="tablist"] > .active {
     transition: all 120ms ease-out 0s;
 }
 
+.contact-form button[type="submit"]:hover,
+.contact-form button[type="submit"]:focus {
+    background: var(--color-accent-dark);
+    color: var(--color-text-accent);
+}
+
 .form-group label {
     position: absolute;
     font-size: 0.5em;

@@ -2,11 +2,11 @@
 
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
-  --color-primary: #906129;
-  --color-accent: #00BFA5;
-  --color-accent-dark: #00796B;
-  --color-text-accent: #fff;
-  --color-background-dark: #1e1e1e;
+  --color-primary: #FDD835;
+  --color-accent: #FDD835;
+  --color-accent-dark: #fbc02d;
+  --color-text-accent: #161616;
+  --color-background-dark: #161616;
   --color-background-dark-200: #2e2e2e;
   --color-background-light: #fff;
   --color-text-dark: #fff;
