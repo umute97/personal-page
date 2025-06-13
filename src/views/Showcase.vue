@@ -27,11 +27,89 @@ const selectedIndex = ref(0)
 
 const tabs = ref([
     {
+        title: "Research", isActive: false, actionText: "Read",
+        content: "Here you can find the research I did during my time in the field. I specialized in silicon detector physics, so I know \
+        my way around a silicon lab, hardware in general and overcoming frustration. Mastered the last one.", items: [
+            {
+                title: "Irradiation studies of the Resistive AC-coupled Silicon Detector (RSD/AC-LGAD)",
+                desc: "My first paper! I investigated the radiation hardness of ultrafast silicon devices for timing applications in \
+                collider detectors and beyond. It is focused on research and development - state of the art.",
+                img: "/paper.jpg",
+                link: "https://www.sciencedirect.com/science/article/pii/S0168900225005066",
+                actionText: "Read"
+            },
+            {
+                title: "Development of an Iterative Irradiation Setup and Online Beam Monitor for Silicon Sensor Irradiation Studies",
+                desc: "My master thesis. In the first part, I built a setup to carry out iterative irradiations on silicon strip sensors and \
+                characterize them in situ. In the second part, I designed and built an ionization chamber for online beam monitoring. To read out \
+                the generated ion current, I also designed a two-staged transimpedance amplifier circuit. X-ray irradiation and \
+                proton irradiations were used to characterize the setup.",
+                img: "https://i.imgur.com/w7KzGfX.png",
+                link: "https://publish.etp.kit.edu/record/22080",
+                actionText: "Read"
+            },
+            {
+                title: "Characterization of Silicon Float Zone Material for the CMS Phase-2 Upgrade",
+                desc: "My bachelor thesis. I characterized a silicon float zone material with a thickness of 290 µm in terms of its electrical properties. \
+                In addition, I investigated charge collection properties and annealing behavior.",
+                img: "https://i.imgur.com/Jo9iQKk.png",
+                link: "https://publish.etp.kit.edu/record/21760",
+                actionText: "Read"
+            },
+        ]
+    },
+    {
+        title: "Skills", isActive: false,
+        content: "I have a good grasp on tech stuff in general and am a quick learner but here are some of the technologies I am \
+        particularly experienced with.", items: [
+            {
+                title: "silicon technology",
+                desc: "Well, I got a bachelor's, master's and soon a PhD in it. Got a question? I probably have an answer. I have worked \
+                with silicon detectors for 6 years now. I gained a lot of knowledge about hardware, electronics and the physics behind it all.",
+                img: "https://bregnery.github.io/images/RSD_umut.png",
+                link: "none",
+                actionText: "none"
+            },
+            {
+                title: "backend and data analysis",
+                desc: "I am more than proficient in Python, especially in the scientific stack. I did a lot of data analysis during my \
+                days in research and built many different full stack applications with Flask, Django and my frontend framework of \
+                choice. I am more concerned with getting it right rather than getting it fast but usually, I manage to do both.",
+                img: "https://images.unsplash.com/photo-1599658880436-c61792e70672",
+                link: "none",
+                actionText: "none"
+            },
+            {
+                title: "frontend",
+                desc: "The usual suspects: HTML, CSS, TypeScript. I am quite comfortable with Vue3 (started out with Vue2) and I am \
+                currently learning more about UX/UI design.",
+                img: "https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076536_1280.jpg",
+                link: "none",
+                actionText: "none"
+            },
+            {
+                title: "docker",
+                desc: "I have used docker for almost all of my projects and administrated the swarm cluster at my old institute. I am \
+                very comfortable with it, even though it can be a pain sometimes. Containerize all the things!",
+                img: "https://wallpapercave.com/wp/wp7718117.jpg",
+                link: "none",
+                actionText: "none"
+            },
+        ]
+    },
+    {
         title: "Projects", isActive: true,
         content: "Whenever I had some time during research I tried to expand my tech knowledge building some apps and trying out different \
         frameworks. Vue really stuck with me so most of them I built using that but I always try something new for each project I take on. \
         All of these projects are dockerized. \
         I did a ton of data analysis but those analyses aren't as flashy as the projects here.", items: [
+            {
+                title: "personal page",
+                desc: "The page you are looking at right now. I built it with Vue3 + vanilla CSS.",
+                img: "/personal-page.jpg",
+                link: "https://github.com/umute97/personal-page",
+                actionText: "Check it out"
+            },
             {
                 title: "Piglify",
                 desc: "In my flatshare, we have to keep track of the chores each of us has to do every week. I built this app to make it \
@@ -53,9 +131,9 @@ const tabs = ref([
             },
             {
                 title: "mcgui",
-                desc: "Someone at my institute built a GUI for the measurements we do in the lab. I took it and made it better first, \
-                solving a bunch of problems with it but it wasn't enough. So I built a new one from scratch, trying to keep the old \
-                format as best as possible since people in the lab were used to it. Vue3 + TypeScript, Naive UI framework and a CI/CD that \
+                desc: "Someone at my institute built a GUI for the measurements we do in the lab. I took it and \
+                built a new one from scratch, trying to keep the old format as best as possible since people \
+                in the lab were used to it. Vue3 + TypeScript, Naive UI framework and a CI/CD that \
                 actually works.",
                 img: "https://i.imgur.com/O3Hrn14.png",
                 link: "https://gitlab.cern.ch/kit-cms/measurementcontrol/MeasurementControl-GUI",
@@ -68,76 +146,6 @@ const tabs = ref([
                 img: "https://i.imgur.com/LAqmud6.png",
                 link: "https://github.com/umute97/siri-gui",
                 actionText: "Check it out"
-            },
-            {
-                title: "personal page",
-                desc: "The page you are looking at right now. I built it with Vue3 + vanilla CSS.",
-                img: "https://i.imgur.com/YcGOKEb.png",
-                link: "https://github.com/umute97/personal-page",
-                actionText: "Check it out"
-            },
-        ]
-    },
-    {
-        title: "Research", isActive: false, actionText: "Read",
-        content: "Here you can find the research I did during my time in the field. I specialized in silicon detector physics, so I know \
-        my way around a silicon lab, hardware in general and overcoming frustration. Mastered the last one.", items: [
-            {
-                title: "Characterization of Silicon Float Zone Material for the CMS Phase-2 Upgrade",
-                desc: "I characterized a silicon float zone material with a thickness of 290 µm in terms of its electrical properties. \
-                In addition, I investigated charge collection properties and annealing behavior.",
-                img: "https://i.imgur.com/Jo9iQKk.png",
-                link: "https://publish.etp.kit.edu/record/21760",
-                actionText: "Read"
-            },
-            {
-                title: "Development of an Iterative Irradiation Setup and Online Beam Monitor for Silicon Sensor Irradiation Studies",
-                desc: "In the first part, I built a setup to carry out iterative irradiations on silicon strip sensors and \
-                characterize them in situ. In the second part, I designed and built an ionization chamber for online beam monitoring. To read out \
-                the generated ion current, I also designed a two-staged transimpedance amplifier circuit. X-ray irradiation and \
-                proton irradiations were used to characterize the setup.",
-                img: "https://i.imgur.com/w7KzGfX.png",
-                link: "https://publish.etp.kit.edu/record/22080",
-                actionText: "Read"
-            },
-        ]
-    },
-    {
-        title: "Skills", isActive: false,
-        content: "I have a good grasp on tech stuff in general and am a quick learner but here are some of the technologies I am \
-        particularly experienced with.", items: [
-            {
-                title: "frontend",
-                desc: "The usual suspects: HTML, CSS, TypeScript. I am quite comfortable with Vue3 (started out with Vue2) and I am \
-                currently learning more about UX/UI design.",
-                img: "https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076536_1280.jpg",
-                link: "none",
-                actionText: "none"
-            },
-            {
-                title: "backend and data analysis",
-                desc: "I am more than proficient in Python, especially in the scientific stack. I did a lot of data analysis during my \
-                days in research and built many different full stack applications with Flask, Django and my frontend framework of \
-                choice. I am more concerned with getting it right rather than getting it fast but usually, I manage to do both.",
-                img: "https://images.unsplash.com/photo-1599658880436-c61792e70672",
-                link: "none",
-                actionText: "none"
-            },
-            {
-                title: "docker",
-                desc: "I have used docker for almost all of my projects and administrated the swarm cluster at my old institute. I am \
-                very comfortable with it, even though it can be a pain sometimes. Containerize all the things!",
-                img: "https://wallpapercave.com/wp/wp7718117.jpg",
-                link: "none",
-                actionText: "none"
-            },
-            {
-                title: "silicon technology",
-                desc: "Well, I got a bachelor's, master's and soon a PhD in it. Got a question? I probably have an answer. I have worked \
-                with silicon detectors for 6 years now. I gained a lot of knowledge about hardware, electronics and the physics behind it all.",
-                img: "https://bregnery.github.io/images/RSD_umut.png",
-                link: "none",
-                actionText: "none"
             },
         ]
     },

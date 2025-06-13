@@ -10,17 +10,16 @@
       </header>
       <section>
         <p>
-          I'm a <a class="breakout" href="https://github.com/umute97">software developer</a> and <span
+          I'm a <a class="breakout" href="https://github.com/umute97">developer</a> and <span
             class="breakout">physicist</span> from Germany (he/she).
         </p>
         <p>
           Currently working on my PhD in silicon detector physics at the <a class="breakout"
             href="https://home.cern/science/experiments/cms">CMS Group</a> of the <a class="breakout"
-            href="https://www.etp.kit.edu/">ETP</a> in Karlsruhe and expect to finish in <span class="breakout">July
-            2025</span>.
+            href="https://www.etp.kit.edu/">ETP</a> in Karlsruhe and I expect to finish end of July 2025.
         </p>
         <p>
-          Better in person, so let's meet!
+          Easy to talk to, so let's meet!
         </p>
         <p>
           Follow me on
