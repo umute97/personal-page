@@ -11,12 +11,11 @@
       <section>
         <p>
           I'm a <a class="breakout" href="https://github.com/umute97">developer</a> and <span
-            class="breakout">physicist</span> from Germany (he/she).
+            class="breakout">physicist</span> based in Karlsruhe, Germany (he/she).
         </p>
         <p>
-          Currently working on my PhD in silicon detector physics at the <a class="breakout"
-            href="https://home.cern/science/experiments/cms">CMS Group</a> of the <a class="breakout"
-            href="https://www.etp.kit.edu/">ETP</a> in Karlsruhe and I expect to finish end of July 2025.
+          After acquiring my PhD in physics at <a href="https://www.kit.edu" class="breakout">KIT</a> in 2025, I've began my career in data science.
+          Currently working as a data scientist at <a class="breakout" href="https://xentral.com">xentral</a>.
         </p>
         <p>
           Easy to talk to, so let's meet!

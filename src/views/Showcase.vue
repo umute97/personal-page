@@ -31,6 +31,15 @@ const tabs = ref([
         content: "Here you can find the research I did during my time in the field. I specialized in silicon detector physics, so I know \
         my way around a silicon lab, hardware in general and overcoming frustration. Mastered the last one.", items: [
             {
+                title: "Irradiation Testing of Silicon Sensors for Future CMS Upgrades",
+                desc: "My PhD thesis, divded into two parts. In the first part, I did irradiation testing of silicon sensors as part of \
+                quality control for the CMS Phase-2 Upgrade. In the second part, I did groundbreaking research and development on novel \
+                silicon sensors with ultrafast timing capabilities, which resulted in several publications.",
+                img: "https://bregnery.github.io/images/RSD_umut.png",
+                link: "https://publikationen.bibliothek.kit.edu/1000183616",
+                actionText: "Read"
+            },
+            {
                 title: "Irradiation studies of the Resistive AC-coupled Silicon Detector (RSD/AC-LGAD)",
                 desc: "My first paper! I investigated the radiation hardness of ultrafast silicon devices for timing applications in \
                 collider detectors and beyond. It is focused on research and development - state of the art.",
@@ -63,19 +72,20 @@ const tabs = ref([
         content: "I have a good grasp on tech stuff in general and am a quick learner but here are some of the technologies I am \
         particularly experienced with.", items: [
             {
-                title: "silicon technology",
-                desc: "Well, I got a bachelor's, master's and soon a PhD in it. Got a question? I probably have an answer. I have worked \
-                with silicon detectors for 6 years now. I gained a lot of knowledge about hardware, electronics and the physics behind it all.",
-                img: "https://bregnery.github.io/images/RSD_umut.png",
-                link: "none",
-                actionText: "none"
-            },
-            {
                 title: "backend and data analysis",
                 desc: "I am more than proficient in Python, especially in the scientific stack. I did a lot of data analysis during my \
                 days in research and built many different full stack applications with Flask, Django and my frontend framework of \
                 choice. I am more concerned with getting it right rather than getting it fast but usually, I manage to do both.",
                 img: "https://images.unsplash.com/photo-1599658880436-c61792e70672",
+                link: "none",
+                actionText: "none"
+            },
+            {
+                title: "silicon technology",
+                desc: "Well, I got a bachelor's, master's and a PhD in it. Got a question? I probably have an answer. I have worked \
+                with silicon detectors for 6 years during which I gained a lot of knowledge about hardware, electronics and the \
+                physics behind it all.",
+                img: "https://bregnery.github.io/images/RSD_umut.png",
                 link: "none",
                 actionText: "none"
             },
@@ -106,7 +116,7 @@ const tabs = ref([
             {
                 title: "personal page",
                 desc: "The page you are looking at right now. I built it with Vue3 + vanilla CSS.",
-                img: "/personal-page.jpg",
+                img: "/personal-page.png",
                 link: "https://github.com/umute97/personal-page",
                 actionText: "Check it out"
             },
